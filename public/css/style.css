@@ -1,25 +1,44 @@
-@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Cormorant:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 body {
+    font-family: 'Roboto', sans-serif; /* Default font for the entire body */
     font-size: 12pt;
+    background-image: url("https://media.istockphoto.com/id/868234810/vector/cute-cartoon-burgers-seamless-pattern-on-color-background-flat-design-vector-illustration.jpg?s=612x612&w=0&k=20&c=3M54ln1ozQy150e1gKIwNLHavnmMiIKEYfhnYoleiQs=");
 }
 
 p {
-    color: red;
+    color: DeepPink;
 }
 
-h1 {
-    font-family: 'Agbalumo';
-    font-size: 36pt;
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
 }
+
+header h1 {
+    font-family: 'Edu AU VIC WA NT Pre', cursive; /* Specific font for the header */
+    font-weight: 400;
+    font-size: 40pt;
+    text-align: center;
+    margin: 0 auto;
+    width: 40rem;
+}
+
 main, header, footer, nav ul {
-    max-width: 40rem;
+    max-width: 100rem;
     margin: 0 auto 0 auto;
 }
 main {
-    background-color: bisque;
+    padding: 10px;
+    margin: 20px;
+    border: 3px solid deeppink;
+    border-radius: 10px;
+    background-color: lavender;
 }
 
-/* nav ul li {
+/*  av ul li {
     display: inline-block;
     background-color: grey;
     padding: 1em;
@@ -27,12 +46,17 @@ main {
 } */
 
 header {
-    background-image: url("../img/polacks.jpg");
+    background-image: url("https://img.freepik.com/premium-vector/hamburger-purple-background-with-purple-background_792213-41.jpg");
     background-size: cover;
     overflow: hidden;
-    width: 100%;
-    height: 200px;
-    opacity: 0.5;
+    min-width:500px;
+    min-height: auto;
+    opacity: 0.9;
+    margin: 25px 0;
+    padding: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border: 5px double deeppink;
 }
 
 header h1 {
@@ -40,14 +64,14 @@ header h1 {
     margin: 0 auto;
     text-align: center;
 }
-
+/*
 nav ul {
     display: grid;
     grid-template-columns: repeat(auto-fill, 9.25em);
     gap: 1em;
     padding: 0;
 }
-
+*/
 nav li {
     display: block;
     background-color: grey;
@@ -61,4 +85,71 @@ nav li {
 .Master {
     color: green;
     font-weight: bold;
+}
+#burger-container {
+    background-color: purple;
+    color: black;
+    display: grid; 
+    justify-content: center;
+    grid-template-columns: 300px 300px 300px ;
+    grid-gap: 10px; 
+    margin: 20px auto; 
+    border: 5px double deeppink;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.burger-item {
+    text-align: center; 
+    margin: 10px auto;
+    padding: 10px;
+    background-color: lavender;
+    border: 2px solid deeppink;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+a. {
+    grid-column: 1 ;
+}
+b. {
+    grid-column: 2 / span 1;
+}
+.c {
+     grid-column: 3 / span 1;
+}
+
+
+.burger-item ul {
+    text-align: left; 
+    margin: 10px; 
+    padding: 20px; 
+}
+
+.burger-item img {
+    width: 100%; 
+    max-width: 400px;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+    border-radius: 8px;
+}
+
+.allergier {
+    color: red
+}
+#allergi {
+    text-transform: uppercase;
+}
+
+#kundinfo {
+    border: 5px double deeppink;
+    padding: 20px;
+    border-radius: 10px;
+}
+#submit-button:hover {
+    background-color: palevioletred;
+    color: azure;
+    cursor: pointer;
 }
