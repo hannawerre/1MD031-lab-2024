@@ -40,7 +40,7 @@ export default {
   },
   data() {
     return{
-      amountOrdered: null,
+      amountOrdered: 0,
     }
   },
 
