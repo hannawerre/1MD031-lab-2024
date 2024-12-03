@@ -1,14 +1,31 @@
 <template>
     <div id="orders">
       <div id="orderList">
-        <div v-for="(order, key) in orders" v-bind:key="'order'+key">
-          #{{ key }}: {{ order.orderItems.join(", ") }}
+        <div v-for="(order, index) in orders" v-bind:key="'order'+index" class="order">
+          <h3>#{{ index }}:</h3>
+         <!-- #{{ key }}: {{ order.orderItems.join(", ") }}-->
+          <p class="order-items">
+            {{ Object.entries(order.orderItems) 
+            .map(([burger, amount]) => `${burger}: ${amount} st`)
+          .join(", ")}},
+          </p>
+          <p class="custumer-info">
+            {{ order.details.name }},
+            {{ order.details.email }},
+            {{ order.details.paymentMethod }},
+            {{ order.details.gender }}
+          </p>
+
         </div>
-        <button v-on:click="clearQueue">Clear Queue</button>
+        <button id="clearQueue" v-on:click="clearQueue">Clear Queue</button>
       </div>
+
       <div id="dots">
-          <div v-for="(order, key) in orders" v-bind:style="{ left: order.details.x + 'px', top: order.details.y + 'px'}" v-bind:key="'dots' + key">
-            {{ key }}
+          <div v-for="(order, index) in orders" v-bind:style="{ left: order.details.x + 'px', top: order.details.y + 'px'}" 
+          v-bind:key="'dots' + index" class="dots-container">
+            <!--{{ key }}-->
+             <div class="dot">T</div>
+             <div class="order-id">{{ "#" + order.orderId}}</div>
           </div>
       </div>
     </div>
@@ -21,12 +38,12 @@
     name: 'DispatcherView',
     data: function () {
       return {
-        orders: null,
+        orders: [],
       }
     },
     created: function () {
       socket.on('currentQueue', data =>
-        this.orders = data.orders);
+      this.ReciveOrders(data))
     },
     methods: {
       clearQueue: function () {
@@ -35,6 +52,10 @@
       changeStatus: function(orderId) {
         socket.emit('changeStatus', {orderId: orderId, status: "Annan status"});
 
+      },
+      ReciveOrders: function(data) {
+        this.orders = data.orders;
+        console.log(this.orders)
       }
     }
   }
@@ -49,6 +70,18 @@
     background: rgba(255,255,255, 0.5);
     padding: 1em;
   }
+
+  .order {
+    margin: 1px;
+    padding: 0.5em;
+  }
+  .order-items {
+    margin: 1px;
+  }
+  .costumer-info {
+    margin: 1px;
+  }
+
   #dots {
     position: relative;
     margin: 0;
@@ -59,7 +92,43 @@
     cursor: crosshair;
     background-image: url('/img/polacks.jpg');
   }
-  
+  .dots-container {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    
+  }
+
+  .dot{
+    position: absolute;
+    background: black;
+    color: white;
+    border-radius: 10px;
+    width: 20px;
+    text-align: center;
+    z-index: 10;
+    top: -10px;
+    left: -7px;
+  }
+
+  .order-id {
+    position: absolute;
+    transform: translateX(-50%);
+    z-index: 5;
+    top: 7px;
+    left: 2px;
+    border: double deeppink;
+    border-radius: 5px;
+    color: deeppink;
+    background: lavender;
+    
+  }
+
+   #clearQueue:hover {
+    background-color: palevioletred;
+    color: azure;
+    cursor: pointer;
+}
+  /*
   #dots div {
     position: absolute;
     background: black;
@@ -69,5 +138,6 @@
     height:20px;
     text-align: center;
   }
+    */
   </style>
   

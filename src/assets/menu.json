@@ -1,21 +1,33 @@
 [{
-    "name": "Veggie Bliss", 
-    "kCal": 500, 
-    "url": "https://images-bonnier.imgix.net/files/ifo/production/20220412084608/Kødfri-burger-1.jpg?auto=compress,format&w=1024%201024w",
-    "lactose": false, 
-    "gluten": false
+    "name": "Double Smashad Queenie TruffleBurger", 
+    "kCal": 6500, 
+    "imageUrl": "https://www.unileverfoodsolutions.se/dam/global-ufs/mcos/nordics/calcmenu/recipes/se-recipes/hellmanns_relaunch/double-smash-burger/Double-smash-burger_Header.jpg",
+    "description":"Smashed burgare av nötkött med briochebörd",
+    "onBurger":"Picklad rödlök, cheddar, mayo och tryffelost",
+    "sides":"Pommes frites och valfri dipsås",
+    "lactose": true, 
+    "gluten": true,
+    "vegetarisk": false
 },
 {
-    "name": "Veggie Bliss", 
-    "kCal": 500, 
-    "url": "https://images-bonnier.imgix.net/files/ifo/production/20220412084608/Kødfri-burger-1.jpg?auto=compress,format&w=1024%201024w",
-    "lactose": false, 
-    "gluten": false
+    "name": "Perfect Chicken Pickle", 
+    "kCal": 580, 
+    "imageUrl": "//www.elinaomickesmat.se/wp-content/uploads/2022/06/DSC_5058-1080x675.jpg",
+    "description":"Friterad kyckling på sesambröd",
+    "onBurger":"Saltgurka, coleslaw, mayo och lök",
+    "sides":"Pommes frites och valfri dipsås",
+    "lactose": true, 
+    "gluten": true,
+    "vegetarisk": false
 },
 {
-    "name": "Veggie Bliss", 
-    "kCal": 500, 
-    "url": "https://images-bonnier.imgix.net/files/ifo/production/20220412084608/Kødfri-burger-1.jpg?auto=compress,format&w=1024%201024w",
-    "lactose": false, 
-    "gluten": false
+    "name": "Halloumi Avocado Deluxe", 
+    "kCal": 520, 
+    "imageUrl": "//res.cloudinary.com/hemkop-eu/image/upload/c_fill,g_auto:custom_no_override,h_560,q_auto,w_1000/v1/recipeImages/9733790138398",
+    "description":"Halloumi på briochebörd",
+    "onBurger":"Picklad rödlök, avokado, mayo och colaslaw<",
+    "sides":"Sötpotatis pommes och valfri dipsås",
+    "lactose": true, 
+    "gluten": true,
+    "vegetarisk": true
 }]
