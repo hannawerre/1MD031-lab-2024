@@ -5,6 +5,7 @@ Before you submit the final version of your labs, make sure that your project fu
 ## 00 Introduction
 
 - [x] Install an IDE on your system
+//hej
 
 ## 01 Git
 
